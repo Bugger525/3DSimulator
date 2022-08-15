@@ -32,6 +32,7 @@ public:
 	void Clear(const Mask& mask) const;
 	void ClearColor(float red, float green, float blue, float alpha) const;
 
+	void Close() const;
 	void Terminate() const;
 private:
 	std::tuple<int, int> size_;

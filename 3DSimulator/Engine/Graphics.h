@@ -7,3 +7,15 @@ enum class Mask : unsigned int
 	Accum = 0x00000200,
 	Stencil = 0x00000400
 };
+class Shader
+{
+
+};
+class Texture
+{
+
+};
+class Model
+{
+
+};

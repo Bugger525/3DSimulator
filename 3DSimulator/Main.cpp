@@ -7,6 +7,7 @@
 */
 
 #include "Engine/RenderWindow.h"
+#include "Engine/Graphics.h"
 #include <iostream>
 
 int main()
@@ -20,7 +21,7 @@ int main()
 
 	while (renderWindow.IsOpen())
 	{
-		renderWindow.Clear();
+		renderWindow.Clear(Mask::Color);
 
 		// RENDER
 

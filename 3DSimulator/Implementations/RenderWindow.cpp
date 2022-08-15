@@ -48,6 +48,13 @@ bool RenderWindow::Initialize()
 	gladLoadGL();
 	glfwSwapInterval(1); // Enable VSYNC
 
+	glfwSetWindowSizeCallback(data_, [](GLFWwindow* window, int width, int height)
+		{
+			auto renderWindow = static_cast<RenderWindow*>(glfwGetWindowUserPointer(window));
+			renderWindow->SetSize(width, height);
+			glViewport(0, 0, width, height);
+		});
+	endOfInit_ = true;
 	return true;
 }
 const tuple<int, int>& RenderWindow::GetSize() const
@@ -122,6 +129,10 @@ void RenderWindow::Clear(const Mask& mask) const
 void RenderWindow::ClearColor(float red, float green, float blue, float alpha) const
 {
 	glClearColor(red, green, blue, alpha);
+}
+void RenderWindow::Close() const
+{
+	glfwSetWindowShouldClose(data_, true);
 }
 void RenderWindow::Terminate() const
 {

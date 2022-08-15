@@ -129,12 +129,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Implementations\Graphics.cpp" />
+    <ClCompile Include="Implementations\GUI.cpp" />
+    <ClCompile Include="Implementations\Input.cpp" />
+    <ClCompile Include="Implementations\ResourceManager.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Implementations\RenderWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Graphics.h" />
+    <ClInclude Include="Engine\GUI.h" />
+    <ClInclude Include="Engine\Input.h" />
     <ClInclude Include="Engine\RenderWindow.h" />
+    <ClInclude Include="Engine\ResourceManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
