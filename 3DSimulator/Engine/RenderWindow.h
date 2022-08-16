@@ -24,6 +24,8 @@ public:
 	const std::string& GetGLSLVersion() const;
 	void SetGLVersion(int major, int minor);
 
+	GLFWwindow* GetData() const;
+
 	bool IsOpen() const;
 
 	void PollEvents() const;
@@ -33,7 +35,7 @@ public:
 	void ClearColor(float red, float green, float blue, float alpha) const;
 
 	void Close() const;
-	void Terminate() const;
+	void Cleanup() const;
 private:
 	std::tuple<int, int> size_;
 	std::string title_;

@@ -110,6 +110,10 @@ void RenderWindow::SetGLVersion(int major, int minor)
 	std::get<0>(glVersion_) = major;
 	std::get<1>(glVersion_) = minor;
 }
+GLFWwindow* RenderWindow::GetData() const
+{
+	return data_;
+}
 bool RenderWindow::IsOpen() const
 {
 	return !glfwWindowShouldClose(data_);
@@ -134,7 +138,7 @@ void RenderWindow::Close() const
 {
 	glfwSetWindowShouldClose(data_, true);
 }
-void RenderWindow::Terminate() const
+void RenderWindow::Cleanup() const
 {
 	glfwDestroyWindow(data_);
 	glfwTerminate();
